@@ -1,12 +1,16 @@
-import { Button } from "./components/ui/button"
+import './global.css'
 
-function App() {
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { RouterProvider } from 'react-router-dom'
+
+import { router } from './routes'
+
+export function App() {
   return (
-    <div>
-      <h1>Pizza Shop</h1>
-      <Button variant={"secondary"}>Enviar</Button>
-    </div>
+    <HelmetProvider>
+      <Helmet titleTemplate="%s | pizza.shop" />
+
+      <RouterProvider router={router} />
+    </HelmetProvider>
   )
 }
-
-export default App
