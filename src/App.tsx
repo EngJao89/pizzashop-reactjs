@@ -1,8 +1,11 @@
-import './App.css'
+import { Button } from "./components/ui/button"
 
 function App() {
   return (
-    <h1>Pizza Shop</h1>
+    <div>
+      <h1>Pizza Shop</h1>
+      <Button variant={"secondary"}>Enviar</Button>
+    </div>
   )
 }
 
